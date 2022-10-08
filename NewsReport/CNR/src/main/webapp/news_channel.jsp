@@ -65,6 +65,7 @@ statement = con.createStatement();
 String QueryString = "SELECT * from news";
 rs = statement.executeQuery(QueryString);
 while (rs.next()) {
+	String url = "http://localhost:8080/CNR/display.jsp?id="+rs.getInt(1);
 %>
 <!-- =================== Articles  =================== -->
   <div class="container">
@@ -72,15 +73,15 @@ while (rs.next()) {
         <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
       </div>
       <div class="card__body">
-        <span class="tag tag-blue">Technology</span>
-        <h4><%=rs.getString(1)%></h4>
-        <p><%=rs.getString(2)%></p>  
+       
+        
+        
+        <a href=<%=url%>> <%=rs.getString(2)%></a>
+          
         </div>
    </div>
       
       
-
-
 <% } %>
 <%
 // close all the connections.
