@@ -69,14 +69,10 @@ while (rs.next()) {
 %>
 <!-- =================== Articles  =================== -->
   <div class="container">
-      <div class="card__header">
-        <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
-      </div>
+  	
       <div class="card__body">
-       
-        
-        
-        <a href=<%=url%>> <%=rs.getString(2)%></a>
+      	<br>
+       	<a href=<%=url%>> <%=rs.getString(2)%></a>
           
         </div>
    </div>
