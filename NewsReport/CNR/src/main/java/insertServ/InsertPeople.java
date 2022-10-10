@@ -1,11 +1,13 @@
 package insertServ;
 
 import java.io.IOException;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class InsertPeople
  */
+@WebServlet("/BookController")
 public class InsertPeople extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -42,7 +45,7 @@ public class InsertPeople extends HttpServlet {
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String pass = request.getParameter("password"); 
-		
+		/*
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/news","root","tester123"); 
@@ -63,7 +66,14 @@ public class InsertPeople extends HttpServlet {
 			e.printStackTrace();
 	
 		} 
-		
+		*/ 
+		people p = new people(); 
+		p.setEmail(email); 
+		p.setName(name); 
+		p.setPassword(pass); 
+		peopledao dao = new peopledao(); 
+		dao.addUpdateBook(p);
+		response.sendRedirect("login.html");  
 		
 	}
 

@@ -65,7 +65,7 @@ public class LoginPeople extends HttpServlet {
 	             rs =preparedStatement.executeQuery();
 	             if(rs.next()) {
 	        
-	            		 response.sendRedirect("news_channel.html");
+	            		 response.sendRedirect("news_channel.jsp");
 	             }
 	             else {
 	            	 response.sendRedirect("login.html");

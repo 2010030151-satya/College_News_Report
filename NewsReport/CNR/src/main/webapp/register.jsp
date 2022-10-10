@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+
+
+<html>
 <head>
   <title>
     register
@@ -8,6 +13,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -76,12 +82,12 @@
         
         <center>
         <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
-          <form action="InsertPeople" method="post" class="php-email-form1" >
+          <form action="<%=request.getContextPath()%>/BookController" method="post" class="php-email-form1" >
             <div class="form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"  >
             </div><br>
             <div class="form-group">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"  required>
             </div><br>
             <div class="form-group">
               <input type="password" class="form-control" name="password" id="password" placeholder="Your password" required>

@@ -36,6 +36,9 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <link rel="stylesheet" href="./news.css">
+        <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
  
@@ -67,15 +70,18 @@ ResultSet resultset = statement.executeQuery("select * from news where id="+id+"
 %>
 <% while(resultset.next()){ %>
 <!-- =================== Articles  =================== -->
-		<center> <img src=<%=resultset.getString(4)%>></center>
-		<%= resultset.getString(2) %><br>
-      	<%= resultset.getString(3) %><br>
-       
+		
+   
+       <div class="container ">
+            <img src=<%=resultset.getString(4)%> alt="">
+
+            <h2><%= resultset.getString(2) %></h2>
+            <p>	<%= resultset.getString(3) %></p>
+          
+          </div>
+      
         
            <% } %>
-   
-      
-      
           
 </body>
 </html>
