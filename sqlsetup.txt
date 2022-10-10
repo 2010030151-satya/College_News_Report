@@ -1,0 +1,3 @@
+create database news; 
+create table people(name text, email text, password text); 
+create table news(id int primary key auto_increment,headline text, content text, photo text);  
