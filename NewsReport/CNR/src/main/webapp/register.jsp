@@ -55,7 +55,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto " href="login.html">Log-in</a></li>
-          <li><a class="nav-link scrollto" href="register.html">Register</a></li>
+          <li><a class="nav-link scrollto" href="register.jsp">Register</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
