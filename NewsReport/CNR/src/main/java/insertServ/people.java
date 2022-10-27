@@ -11,14 +11,14 @@ import javax.persistence.Table;
 public class people {
 
 	@Id
-	@Column(name="name")
+	@Column(name="name", updatable=false)
 	private String name; 
 	
-	@Column(name = "email")
+	@Column(name = "email", updatable=false)
     private String email;
 
     
-    @Column(name = "password")
+    @Column(name = "password", updatable=false)
     private String password;
     
 	public people (String name, String email, String password) {

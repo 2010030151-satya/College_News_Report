@@ -2,9 +2,11 @@ package insertServ;
 
 import java.io.IOException;
 
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -45,36 +47,19 @@ public class InsertPeople extends HttpServlet {
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String pass = request.getParameter("password"); 
-		/*
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/news","root","tester123"); 
-			String s = "insert into people values(?,?,?);"; 
-			PreparedStatement p = con.prepareStatement(s); 
-			p.setString(1, name);
-			p.setString(2, email);
-			p.setString(3, pass);
-			
-			
-			
-			if(p.executeUpdate()>0) {
-				response.sendRedirect("login.html");  
-			}
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-	
-		} 
-		*/ 
 		people p = new people(); 
 		p.setEmail(email); 
 		p.setName(name); 
-		p.setPassword(pass); 
-		peopledao dao = new peopledao(); 
-		dao.addUpdateBook(p);
-		response.sendRedirect("login.html");  
+		p.setPassword(pass);
 		
+		peopledao dao = new peopledao(); 
+		if (dao.addBook(p) == 0 )
+			response.sendRedirect("login.html");  
+		else
+			response.sendRedirect("register.jsp"); 
+		
+
+	
 	}
 
 }

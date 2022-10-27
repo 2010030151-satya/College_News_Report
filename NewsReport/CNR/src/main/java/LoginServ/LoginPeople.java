@@ -44,37 +44,48 @@ public class LoginPeople extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
         ResultSet rs;
+        ResultSet adminrs;
         String userid = request.getParameter("email");
         String password = request.getParameter("password");
-        if(userid.equals("admin@admin.com") && password.equals("admin")){
-        	response.sendRedirect("news_channel_admin.html");
-        }
-        else if(userid.equals("maintain@me.com")) {
-        	response.sendRedirect("enter_news.html");
-        }
-        else { 
             try{
 	            String sql = "SELECT * FROM people WHERE email = ? AND password = ?";
+	            String adminsql = "select * from admin where email = ? and password = ?"; 
 	            Class.forName("com.mysql.jdbc.Driver"); 
 	            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/news", "root", "tester123");
+	            
 	            
 	            PreparedStatement preparedStatement = con.prepareStatement(sql);
 	            preparedStatement.setString(1, userid);
 	            preparedStatement.setString(2, password);
 	            	
+
+	            PreparedStatement preparedStatementa = con.prepareStatement(adminsql);
+	            preparedStatementa.setString(1, userid);
+	            preparedStatementa.setString(2, password);
+	            
 	             rs =preparedStatement.executeQuery();
-	             if(rs.next()) {
-	        
-	            		 response.sendRedirect("news_channel.jsp");
-	             }
-	             else {
+	             adminrs = preparedStatementa.executeQuery(); 
+	            
+	            if(adminrs.next()) {
+	            	response.sendRedirect("AdminIndex.html");
+	            }
+	            else
+	            {
+	            	if(rs.next()) {
+	            		 response.sendRedirect("NewsChannel.jsp");
+	            	 }
+	            	 else 
 	            	 response.sendRedirect("login.html");
-				     
+	       
 	             }
-	
-	        }catch(Exception e) {
+            	} 	
+	             
+	            catch(Exception e) {
 	            System.out.println("The exception is" + e);
-	        }
-        }
-    }
-}
+	            }
+            
+        
+	}
+	}
+
+ 
