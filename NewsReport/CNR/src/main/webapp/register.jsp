@@ -42,16 +42,14 @@
 </head>
 <body>
   
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
+ <header id="header" >
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1>ProjectName</h1>
+        <h1>College News Report</h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
-
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto " href="login.html">Log-in</a></li>
@@ -59,11 +57,10 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
     </div>
   </header><!-- End Header -->
-  <br>
-  <br>
+
+  
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact">
     <div class="container">
@@ -71,7 +68,6 @@
       <div class="section-title" data-aos="fade-up">
         <h2>Register</h2>
       </div>
-
       <div class="row">
 
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">

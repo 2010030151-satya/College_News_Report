@@ -9,7 +9,7 @@
 <html>
 <head>
   <title>
-    register
+   enternewss
   </title>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -46,29 +46,28 @@
 <body>
   
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
+  <header id="header" >
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1>Register</h1>
+        <h1>NewsEntry</h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
 	        <ul>
-	          <li><a class="nav-link scrollto" href="NewsChannel.jsp">News Channel</a></li>
-	          <li><a class="nav-link scrollto " href="EnterNews.jsp">Enter News</a></li>
+	          <li><a class="" href="NewsChannel.jsp">News Channel</a></li>
+	          <li><a class=" " href="EnterNews.jsp">Enter News</a></li>
 	          <li><a class="nav-link scrollto" href="EditNews.jsp">Edit News</a></li>
 	          <li><a class="nav-link scrollto" href="DeleteNews.jsp">Delete News</a></li>
 	        </ul>
 	        <i class="bi bi-list mobile-nav-toggle"></i>
-	      </nav><!-- .navbar -->
+	  </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
-  <br>
-  <br>
+ 
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact">
     <div class="container">
@@ -109,13 +108,11 @@
             <div class="text-center"><button type="submit">Push Article</button></div>
           
           </form>
-          </center>
+</center>
           
         </div>
      
       </div>
-
-    </div>
   </section><!-- End Contact Section -->
 
   

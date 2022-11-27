@@ -40,11 +40,11 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
+  <header id="header">
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1>ProjectName</h1>
+        <h1>College News Report</h1>
       </div>
       
       
