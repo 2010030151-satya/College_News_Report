@@ -12,4 +12,4 @@
 1. Jyothin Movva
 2. M Haneesh
 3. Satyavarsan K
-4. Devraj Acharya
+4. Devaraj Acharya
